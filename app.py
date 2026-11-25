@@ -23,7 +23,6 @@ PROJECTS = [
   tools="Python, Pandas, NumPy, FastAPI, HTML/CSS/JS, Pytest",
   impact="90.6% baseline skill match for Data Analyst roles; pipeline automated with 6/6 Pytest tests passing.",
   tags=["Python", "Pandas", "NumPy", "FastAPI", "Pytest"], links=[("Live Demo", "https://jobmarket-intelligence-4.onrender.com/")]),
-<<<<<<< HEAD
  dict(n="FraudAuditor", y="", role="Team Lead · Backend & Deployment", t="Visual analytics for collusive fraud in health insurance", org="Team Project", cat="analytics ai",
   sum="A machine learning web app that flags potential fraud patterns in health insurance claims.",
   met=[("Team Lead", "Backend & deployment"), ("Live", "Deployed on Vercel")],
@@ -32,9 +31,6 @@ PROJECTS = [
   impact="Classifies potentially fraudulent claims and supports visual analysis of the results; deployed on Vercel with GitHub-connected continuous deployment.",
   tags=["Django", "Scikit-learn", "MySQL", "Vercel"], links=[("Live Project", "https://fraudauditor.vercel.app/"), ("GitHub", "https://github.com/SrijaGaddam05/FraudAuditor")]),
  dict(n="New Sandarshini Restaurant Website", y="Jan 2026", role="Backend & Database", t="Paid Freelance Client Project", org="College Team", cat="client",
-=======
- dict(n="New Sandarshini Restaurant Website", y="Jan 2026", t="Paid Freelance Client Project", org="College Team", cat="client",
->>>>>>> bacb5977c9be1c1467019a133b619118d4fd8db6
   sum="A live website for a Kadthal restaurant, built with college teammates.",
   met=[("Live", "Client website"), ("Firebase", "Database & backend")],
   what="With college teammates, built a live website for a restaurant in Kadthal. My role: data handling, database and backend, storing customer reviews in Firebase.",
@@ -88,23 +84,11 @@ def tags(t):
 
 # level: Proficient / Working / Familiar
 SKILLS = {
-<<<<<<< HEAD
  "Data Analysis": ["Python", "Pandas", "NumPy", "Data Cleaning", "EDA", "Statistical Analysis"],
  "Databases": ["MySQL", "SQL Queries", "Firebase"],
  "Visualization": ["Matplotlib", "Seaborn", "Excel", "Power BI"],
  "Machine Learning & AI": ["Feature Engineering", "PCA", "NLP", "Generative AI", "Prompt Engineering", "Computer Vision", "Scikit-learn", "ML Classification"],
  "Backend & Tools": ["Django", "FastAPI", "Pytest", "Vercel", "Git & GitHub", "Jupyter", "Google Colab", "VS Code", "Java", "DSA"],
-=======
- "Data Analysis": [("Python", "Proficient", "Pipelines on 24,831 records"), ("Pandas & NumPy", "Proficient", "Internship + JobMarket"),
-   ("Data Cleaning & EDA", "Proficient", "Neoskillz, ClinicAI"), ("Statistical Analysis", "Familiar", "Applied in ClinicAI")],
- "Databases": [("MySQL", "Working", "Joins, aggregations, grouping"), ("SQL Queries", "Working", "MySQL Using AI certified")],
- "Visualization": [("Matplotlib & Seaborn", "Working", "Trend and EDA charts"), ("Excel", "Working", "Microsoft Office Specialist"),
-   ("Power BI", "Familiar", "Dashboard-ready metrics")],
- "Machine Learning & AI": [("Feature Engineering & PCA", "Working", "Encoding, scaling, PCA"), ("NLP", "Working", "MarketMind AI"),
-   ("Generative AI & Prompting", "Working", "AI Hand Workspace"), ("Scikit-learn", "Familiar", "ML fundamentals")],
- "Backend & Tools": [("FastAPI", "Working", "JobMarket dashboard"), ("Pytest", "Working", "6/6 tests passed"),
-   ("Git & GitHub", "Working", "Version control"), ("Jupyter & Colab", "Working", "Daily analysis")],
->>>>>>> bacb5977c9be1c1467019a133b619118d4fd8db6
 }
 
 CERTS = [
@@ -319,7 +303,6 @@ header{background:#f6f6f2;border-bottom:1px solid #111}
 .met b{display:block;font:700 26px/1.1 'Oswald',sans-serif}.met span{font:700 10px 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;opacity:.75}
 .mlinks{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .mbox p{max-width:760px}
-<<<<<<< HEAD
 
 .sg{margin-top:72px}.sg h2{font:700 clamp(26px,3.6vw,42px)/1.05 'Oswald',sans-serif;text-transform:uppercase;margin:6px 0 8px}
 .skg{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:20px;margin-top:22px}
@@ -341,8 +324,6 @@ header{background:#f6f6f2;border-bottom:1px solid #111}
 .chip{border:1px solid #111;background:#fff;padding:8px 16px;font:700 12px 'JetBrains Mono',monospace;letter-spacing:.06em;transition:.2s}
 .chip:hover{background:#111;color:#fff;box-shadow:3px 3px 0 var(--r)}
 @media(max-width:800px){.cat{grid-template-columns:1fr;gap:12px}}
-=======
->>>>>>> bacb5977c9be1c1467019a133b619118d4fd8db6
 """
 
 
@@ -513,12 +494,9 @@ def projects():
     for i, p in enumerate(PROJECTS, 1):
         pid = f"project-{i}"
         lab = LAB[p["cat"].split()[0]]
-<<<<<<< HEAD
         facts = ((f'<div><small>Year</small><b>{e(p["y"])}</b></div>' if p["y"] else "")
                  + (f'<div><small>Role</small><b>{e(p["role"])}</b></div>' if p.get("role") else "")
                  + f'<div><small>Type</small><b>{e(p["t"])}</b></div>')
-=======
->>>>>>> bacb5977c9be1c1467019a133b619118d4fd8db6
         mets = "".join(f'<div class="met"><b>{e(v)}</b><span>{e(l)}</span></div>' for v, l in p["met"])
         cards += (f'<a class="pc {p["cat"]}" href="#{pid}"><span class="ix">0{i}</span><span class="type">{e(lab)}</span>'
                   f'<div class="co" style="margin-top:12px">{e(p["org"])}</div><h2>{e(p["n"])}</h2><p>{e(p["sum"])}</p>'
@@ -526,11 +504,7 @@ def projects():
         btn = "".join(f'<a class="btn" href="{u}" target="_blank" rel="noopener">{e(t)} &nearr;</a>' for t, u in p["links"])
         mods += (f'<div class="modal" id="{pid}"><a class="close-bg" href="#registry" aria-label="Close"></a><div class="mbox">'
                  f'<a class="mx" href="#registry">Close &times;</a><span class="type">{e(lab)}</span><h2>{e(p["n"])}</h2><div class="co">{e(p["org"])}</div>'
-<<<<<<< HEAD
                  f'<div class="facts">{facts}</div>'
-=======
-                 f'<div class="facts"><div><small>Year</small><b>{e(p["y"])}</b></div><div><small>Type</small><b>{e(p["t"])}</b></div></div>'
->>>>>>> bacb5977c9be1c1467019a133b619118d4fd8db6
                  f'<h4>What I Did</h4><p>{e(p["what"])}</p><h4>Tools</h4><p>{e(p["tools"])}</p><h4>Impact</h4><p>{e(p["impact"])}</p>'
                  f'<div class="mlinks">{btn}</div></div></div>')
     body = head("Project Archive", "Data Casework & Builds",
@@ -546,7 +520,6 @@ def projects():
 
 @app.route("/skills")
 def skills():
-<<<<<<< HEAD
     rows = ""
     for i, (g, items) in enumerate(SKILLS.items(), 1):
         chips = "".join(f'<span class="chip">{e(x)}</span>' for x in items)
@@ -554,13 +527,6 @@ def skills():
     body = (head("Competency Directory", "Core Skills", "The tools and methods I use, grouped by category.")
             + f'<div class="cats">{rows}</div><div class="row" style="margin-top:44px"><a class="btn" href="/projects">See Them In Projects &rarr;</a></div>')
     return page("/skills", "Skills", body)
-=======
-    out = head("Competency Directory", "Core skills", "Hands-on skills backed by projects, internships and certifications.")
-    for g, items in SKILLS.items():
-        out += f"<h2>{e(g)}</h2><div class='grid'>" + "".join(
-            f"<div class='card'><h3>{e(n)}</h3><p class='m'>{e(w)}</p></div>" for n, l, w in items) + "</div>"
-    return page("/skills", "Skills", out)
->>>>>>> bacb5977c9be1c1467019a133b619118d4fd8db6
 
 
 @app.route("/certifications")
